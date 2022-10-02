@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <style>
+      [hidden]{
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <div class="contanier">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card card-body text-center mt-5">
+            <h1 class="heading display-5 pb-3">LOAN CALCULATOR</h1>
+            <form id="loan-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-text">$</span>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="amount"
+                    placeholder="Loan amount"
+                  />
+                </div>
+              </div>
+              <br />
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-text">%</span>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="interest"
+                    placeholder="Interest"
+                  />
+                </div>
+              </div>
+              <br />
+              <div class="form-group">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="years"
+                  placeholder="Years to Repay"
+                />
+              </div>
+              <br />
+              <div class="form-group d-grid gap-2">
+                <input type="submit" value="submit" class="btn btn-dark" id="loan-form" />
+              </div>
+
+            </form>
+            <!-- LOADER -->
+            <div id="loading">
+              <img src="./img/loading.gif" alt="">
+            </div>
+            <!--  result div  -->
+             <div id="result" >
+                <h3>Result</h3>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-text">Monthly Payment</span>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="monthly-payment"
+                      disabled
+                    />
+                  </div> <br>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-text">Total Payment</span>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="total-payment"
+                      disabled
+                    />
+                  </div>
+                  <br>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-text">Total Interest</span>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="total-interest"
+                      disabled
+                    />
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app01.js"></script>
+  </body>
+</html>
